@@ -5,8 +5,17 @@
 # tabulated-list-filter
 > Provide filtering/searching tabulated-list interface.
 
+Any package that uses `tabulated-list` as their display could 
+use this library/package to add the search functionalities to 
+enhance the user experience.
+
+[Here](https://github.com/jcs090218/jcs-emacs-init/tree/master/features/buffer-menu-search) 
+is one example using this package to `*Buffer List*` implemented 
+from [jcs-emacs-init](https://github.com/jcs090218/jcs-emacs-init).
+
 
 ## Contribution
+
 If you would like to contribute to this project, you may either
 clone and make pull requests to this repository. Or you can
 clone the project and establish your own branch of this tool.
