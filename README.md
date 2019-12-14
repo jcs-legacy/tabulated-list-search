@@ -10,8 +10,7 @@ use this library/package to add the search functionalities to
 enhance the user experience.
 
 [Here](https://github.com/jcs090218/jcs-emacs-init/tree/master/features/buffer-menu-search) 
-is one example using this package to `*Buffer List*` implemented 
-from [jcs-emacs-init](https://github.com/jcs090218/jcs-emacs-init).
+is one example using this package to `*Buffer List*`.
 
 
 ## Contribution
