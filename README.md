@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.com/jcs090218/tabulated-list-filter.svg?branch=master)](https://travis-ci.com/jcs090218/tabulated-list-filter)
+[![Build Status](https://travis-ci.com/jcs090218/tabulated-list-search .svg?branch=master)](https://travis-ci.com/jcs090218/tabulated-list-search )
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
-# tabulated-list-filter
+# tabulated-list-search 
 > Provide filtering/searching tabulated-list interface.
 
 Any package that uses `tabulated-list` as their display could 
