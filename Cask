@@ -1,3 +1,3 @@
 (source melpa)
 
-(package-file "tabulated-list-filter.el")
+(package-file "tabulated-list-search.el")
