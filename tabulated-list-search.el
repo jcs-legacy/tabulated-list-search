@@ -1,4 +1,4 @@
-;;; tabulated-list-search.el --- Seach in tabulated-list mode.  -*- lexical-binding: t; -*-
+;;; tabulated-list-search.el --- Seach in tabulated-list mode  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Shen, Jen-Chieh
 ;; Created date 2019-07-15 20:00:02
@@ -6,8 +6,8 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Seach in tabulated-list mode.
 ;; Keyword: filtering interface list searching tabulated
-;; Version: 0.1.0
-;; Package-Requires: ((emacs "25"))
+;; Version: 0.1.1
+;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/jcs090218/tabulated-list-search
 
 ;; This file is NOT part of GNU Emacs.
