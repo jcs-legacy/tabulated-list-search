@@ -8,7 +8,7 @@
 ;; Keyword: filtering interface list searching tabulated
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "25.1"))
-;; URL: https://github.com/jcs090218/tabulated-list-search
+;; URL: https://github.com/jcs-elpa/tabulated-list-search
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -34,13 +34,11 @@
 
 (require 'tabulated-list)
 
-
 (defgroup tabulated-list-search nil
   "Seach in tabulated-list mode."
   :prefix "tabulated-list-search-"
   :group 'tool
-  :link '(url-link :tag "Repository" "https://github.com/jcs090218/tabulated-list-search"))
-
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/tabulated-list-search"))
 
 (defcustom tabulated-list-search-mode-enabled-hook nil
   "Hooks run after `tabulated-list-search-mode' is enabled."
@@ -88,14 +86,11 @@
 (defvar-local tabulated-list-search--return-delay nil
   "Record if hit return when display not ready; once it is ready we redo the action.")
 
-
 (defvar-local tabulated-list-search--return-key-func nil
   "Record down the return key function name")
 
 (defvar-local tabulated-list-search--backspace-key-func nil
   "Record down the backspace key function name")
-
-
 
 (defun tabulated-list-search-return ()
   "Implemenetation for in `tabulated-list-mode' return key."
@@ -107,7 +102,6 @@
         (user-error "No entry on this line"))
     (setq tabulated-list-search--return-delay t)
     (message "[Display not ready]")))
-
 
 (defun tabulated-list-search--filter-list ()
   "Do filtering the list."
@@ -151,8 +145,7 @@ ADD-DEL-NUM : Addition or deletion number."
                              nil
                              'tabulated-list-search--filter-list)))
 
-
-(defun tabulated-list-search-enable ()
+(defun tabulated-list-search--enable ()
   "Enable `tabulated-list-search' in current buffer."
   (setq tabulated-list-search--prev-mode-map tabulated-list-mode-map)
   (dolist (key-str tabulated-list-search--key-list)
@@ -169,7 +162,7 @@ ADD-DEL-NUM : Addition or deletion number."
       (lambda () (interactive) (tabulated-list-search--input "" -1))))
   (run-hooks 'tabulated-list-search-mode-enabled-hook))
 
-(defun tabulated-list-search-disable ()
+(defun tabulated-list-search--disable ()
   "Disable `tabulated-list-search' in current buffer."
   (setq-local tabulated-list-mode-map tabulated-list-search--prev-mode-map)
   (progn  ; Unbind return
@@ -180,15 +173,14 @@ ADD-DEL-NUM : Addition or deletion number."
     (setq tabulated-list-search--backspace-key-func nil))
   (run-hooks 'tabulated-list-search-mode-disabled-hook))
 
-
 ;;;###autoload
 (define-minor-mode tabulated-list-search-mode
   "Minor mode 'tabulated-list-search-mode'."
   :lighter " TLS"
   :group tabulated-list-search
   (if tabulated-list-search-mode
-      (tabulated-list-search-enable)
-    (tabulated-list-search-disable)))
+      (tabulated-list-search--enable)
+    (tabulated-list-search--disable)))
 
 (defun tabulated-list-search-turn-on-tabulated-list-search-mode ()
   "Turn on the 'tabulated-list-search-mode'."
@@ -198,7 +190,6 @@ ADD-DEL-NUM : Addition or deletion number."
 (define-globalized-minor-mode global-tabulated-list-search-mode
   tabulated-list-search-mode tabulated-list-search-turn-on-tabulated-list-search-mode
   :require 'tabulated-list-search)
-
 
 (provide 'tabulated-list-search)
 ;;; tabulated-list-search.el ends here
