@@ -51,7 +51,7 @@
   :group 'tabulated-list-search)
 
 (defcustom tabulated-list-search-delay 0.1
-  "Store filter timer function."
+  "Input delay to refresh buffer."
   :type 'float
   :group 'tabulated-list-search)
 
@@ -178,9 +178,7 @@ ADD-DEL-NUM : Addition or deletion number."
   "Minor mode 'tabulated-list-search-mode'."
   :lighter " TLS"
   :group tabulated-list-search
-  (if tabulated-list-search-mode
-      (tabulated-list-search--enable)
-    (tabulated-list-search--disable)))
+  (if tabulated-list-search-mode (tabulated-list-search--enable) (tabulated-list-search--disable)))
 
 (defun tabulated-list-search-turn-on-tabulated-list-search-mode ()
   "Turn on the 'tabulated-list-search-mode'."
