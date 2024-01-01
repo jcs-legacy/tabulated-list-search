@@ -1,6 +1,6 @@
 ;;; tabulated-list-search.el --- Seach in tabulated-list mode  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2023  Shen, Jen-Chieh
+;; Copyright (C) 2019-2024  Shen, Jen-Chieh
 ;; Created date 2019-07-15 20:00:02
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
