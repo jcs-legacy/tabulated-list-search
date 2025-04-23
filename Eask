@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "tabulated-list-search"
          "0.1.2"
          "Seach in tabulated-list mode")
